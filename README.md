@@ -9,7 +9,7 @@ $names = Get-ChildItem -Path ./ -Name -filter *.mov > list.txt
 
 ### ffmpeg
 #### Concatenate
-ffmpeg -f concat -safe 0 -i list.txt -c copy robot.mov
+ffmpeg -f concat -safe 0 -i list.txt -c copy output.mov
 
 ## Scripts
 ----------
