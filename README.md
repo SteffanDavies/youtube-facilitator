@@ -5,7 +5,7 @@ Tools to help automate tasks for content creation
 ----------
 ### Powershell
 #### Create list of .mov files
-$names = Get-ChildItem -Path ./ -Name -filter *.mov > list.txt
+Get-ChildItem -Path ./ -Name -filter *.mov | foreach {"file '$_'"} | out-file "list.txt" -encoding ASCII
 
 ### ffmpeg
 #### Concatenate
